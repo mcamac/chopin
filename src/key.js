@@ -1,5 +1,5 @@
-class Note {
+class Key {
   constructor() {
-
+    
   }
 }

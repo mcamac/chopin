@@ -1,0 +1,5 @@
+class Chord {
+  constructor(str) {
+
+  }
+}
