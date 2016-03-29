@@ -1,5 +1,5 @@
-class Key {
+export default class Key {
   constructor() {
-    
+
   }
 }
