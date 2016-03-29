@@ -1,7 +1,7 @@
 import {H, W} from './steps'
 
 class Mode {
-  const(steps) {
+  constructor(steps) {
     this.steps = steps
   }
 }
