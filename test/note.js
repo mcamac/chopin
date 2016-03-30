@@ -12,10 +12,17 @@ test('constructor', t => {
 
 test('display', t => {
   let n = new Note(0, 1)
-  t.true(n.display === 'C1')
+  t.true(n.display() === 'C1')
 
   n = new Note(4, 5)
-  t.true(n.display === 'E5')
+  t.true(n.display() === 'E5')
+  t.true(n.display('flat') === 'E5')
+
+  n = new Note(6, 5)
+  t.true(n.display() === 'F#5')
+
+  n = new Note(6, 5)
+  t.true(n.display('flat') === 'Gb5')
 })
 
 test('up', t => {

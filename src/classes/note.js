@@ -5,6 +5,11 @@ const KEYS = [
   'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'
 ]
 
+const ACCIDENTALS = {
+  sharp: ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'],
+  flat: ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'],
+}
+// Convert piano key # (1 - 88) to hash with key/octave
 const fromKeyNum = keynum => ({
   key: (keynum + 9) % 12,
   octave: Math.floor((keynum + 9) / 12),
@@ -26,7 +31,10 @@ export default class Note {
     return this.octave * 12 + this.key - 9
   }
 
-  get display() {
+  display(accidental) {
+    if (accidental) {
+      return ACCIDENTALS[accidental][this.key] + this.octave
+    }
     return KEYS[this.key] + this.octave
   }
 
@@ -40,6 +48,6 @@ export default class Note {
   }
 
   chord(str) {
-    
+
   }
 }
