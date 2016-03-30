@@ -21,4 +21,3 @@ export const m6 = new Interval(8)
 export const M6 = new Interval(9)
 export const m7 = new Interval(10)
 export const M7 = new Interval(11)
-
