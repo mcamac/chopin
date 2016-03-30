@@ -10,11 +10,12 @@ export default class Interval {
   }
 }
 
-export const W = new Interval(2)
-export const H = new Interval(1)
+export const H  = new Interval(1)
+export const W  = new Interval(2)
 export const m3 = new Interval(3)
 export const M3 = new Interval(4)
 export const P4 = new Interval(5)
+export const tritone = new Interval(6)
 export const P5 = new Interval(7)
 export const m6 = new Interval(8)
 export const M6 = new Interval(9)
