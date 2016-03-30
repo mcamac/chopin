@@ -1,5 +1,5 @@
 {
-  "name": "evans",
+  "name": "chopin",
   "version": "0.1.0",
   "description": "Music theory in Javascript",
   "main": "src/index.js",
@@ -16,5 +16,8 @@
   },
   "ava": {
     "babel": "inherit"
+  },
+  "dependencies": {
+    "lodash": "^4.6.1"
   }
 }
