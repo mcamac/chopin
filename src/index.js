@@ -1,1 +1,1 @@
-export {Chord} from './classes'
+export * from './classes'
