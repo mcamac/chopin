@@ -16,7 +16,7 @@ test('display', t => {
 
   n = new Note(4, 5)
   t.true(n.display() === 'E5')
-  t.true(n.display('flat') === 'E5')
+  t.true(n.display('flat') === 'Fb5')
 
   n = new Note(6, 5)
   t.true(n.display() === 'F#5')

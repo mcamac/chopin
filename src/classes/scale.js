@@ -1,4 +1,4 @@
-import {last, reduce} from 'lodash'
+import {concat, last, reduce} from 'lodash'
 
 import {W, H} from './interval'
 
@@ -8,7 +8,7 @@ export default class Scale {
     this.steps = steps
 
     this.notes = reduce(steps, (arr, step) => {
-      return concat(arr, last(arr.nextNote(step)))
+      return concat(arr, last(arr).up(step))
     }, [root])
   }
 
@@ -24,3 +24,7 @@ export default class Scale {
 export const major = [W, W, H, W, W, W, H]
 export const minor = [W, H, W, W, H, W, W]
 // TODO: Add more modes.
+
+Scale.t = {
+  minor, major
+}
